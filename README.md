@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NGA Topografia
 
-## Getting Started
+Plataforma web profissional para NGA Topografia, oferecendo informações sobre serviços de levantamento topográfico, georreferenciamento e regularização de terrenos.
 
-First, run the development server:
+## 🎯 Visão Geral
+
+Este é um site corporativo moderno, responsivo e otimizado para SEO, desenvolvido com as melhores práticas de desenvolvimento web. A aplicação fornece uma experiência profissional para apresentar os serviços da NGA Topografia.
+
+## 🚀 Características
+
+- ✅ **Design Responsivo** - Mobile-first, funciona em todos os dispositivos
+- ✅ **Otimizado para SEO** - Meta tags completas, structured data pronto para implementação
+- ✅ **Acessibilidade** - ARIA labels, semantic HTML, navegação por teclado
+- ✅ **Performance** - Otimizações de imagem, lazy loading
+- ✅ **TypeScript** - Type safety completo
+- ✅ **Animações** - Powered by Framer Motion
+- ✅ **Menu Mobile** - Navegação responsiva com hamburger menu
+- ✅ **Páginas de Erro** - 404 e 500 customizadas
+- ✅ **Segurança** - Headers de segurança
+
+## 📋 Pré-requisitos
+
+- Node.js 18+
+- npm ou yarn
+
+## 🛠️ Instalação
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <URL-DO-REPOSITORIO>
+cd nga-topografia
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏃 Executando
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Desenvolvimento
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Production
+npm run build
+npm start
 
-## Learn More
+# Linting
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Estrutura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── constants/      # Dados e configurações
+├── types/          # Tipos TypeScript
+└── lib/            # Utilitários
+components/        # Componentes React
+app/              # Next.js App Router
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Tecnologias
 
-## Deploy on Vercel
+- Next.js 16, React 19, TypeScript
+- Tailwind CSS, Framer Motion
+- Lucide React para ícones
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📊 Otimizações
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ✅ SEO Meta tags e Open Graph
+- ✅ Acessibilidade (WCAG)
+- ✅ Performance otimizada
+- ✅ Security headers
+- ✅ Mobile-first design
+
+## 🚀 Deploy
+
+Vercel (recomendado):
+```bash
+vercel
+```
+
+## 📝 Convenções
+
+- Componentes: PascalCase
+- Funções: camelCase
+- Types: em `src/types/`
+- Constantes: em `src/constants/`
+
+## ✨ Próximos Passos
+
+1. [ ] Google Analytics
+2. [ ] Formulário de contato com validação
+3. [ ] Testes automáticos (Jest)
+4. [ ] CI/CD pipeline
+5. [ ] Blog/artigos
+6. [ ] i18n multilíngue
+
+---
+
+**Última atualização:** Março 2024

@@ -12,7 +12,31 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "dist/**",
+    "coverage/**",
+    "node_modules/**",
   ]),
+  {
+    rules: {
+      // Acessibilidade
+      "jsx-a11y/alt-text": "warn",
+      "jsx-a11y/anchor-has-content": "warn",
+
+      // React best practices
+      "react/no-unescaped-entities": "warn",
+      "react/display-name": "off",
+
+      // TypeScript
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+
+      // Variáveis não utilizadas
+      "no-unused-vars": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;
+

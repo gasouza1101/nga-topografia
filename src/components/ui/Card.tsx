@@ -10,7 +10,7 @@ interface CardProps {
  * Componente Card
  * Card reutilizável com animações e estilos consistentes
  */
-export default function Card({ children, className }: CardProps) {
+export function Card({ children, className }: CardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.03, y: -4 }}
