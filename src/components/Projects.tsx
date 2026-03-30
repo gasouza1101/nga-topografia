@@ -1,7 +1,7 @@
 "use client";
 
-import { PROJECTS } from "@/constants/projects";
-import { Card } from "@/components/ui";
+import { PROJECTS, FEATURED_PROJECTS } from "@/constants/projects";
+import { ProjectCard } from "@/components/ui/ProjectCard";
 
 /**
  * Componente Projects
@@ -11,65 +11,62 @@ export default function Projects() {
   return (
     <section
       id="projetos"
-      className="py-24 bg-white"
+      className="py-24 bg-gradient-to-br from-white via-gray-50 to-white"
       aria-labelledby="projetos-heading"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Heading */}
-        <div className="text-center mb-12">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">
+            Portfolio
+          </span>
           <h2
             id="projetos-heading"
-            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+            className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4"
           >
             Projetos Realizados
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Conheça alguns dos nossos trabalhos e resultados
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Conheça alguns dos nossos principais trabalhos e a qualidade das soluções que entregamos
           </p>
         </div>
 
-        {/* Grid de Projetos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PROJECTS.map((project) => (
-            <Card key={project.id}>
-              <div className="flex flex-col h-full">
-                {/* Imagem Placeholder */}
-                <div className="w-full h-40 bg-gradient-to-br from-green-100 to-green-50 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-gray-400 text-sm">Imagem do projeto</span>
-                </div>
-
-                {/* Conteúdo */}
-                <div className="flex-grow">
-                  <div className="mb-2">
-                    <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">
-                      {project.category}
-                    </span>
-                  </div>
-                  <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    {project.description}
-                  </p>
-                </div>
-
-                {/* Footer */}
-                <div className="text-xs text-gray-500 border-t pt-3">
-                  {project.date}
-                </div>
-              </div>
-            </Card>
-          ))}
+        {/* Projetos em Destaque */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">Destaques</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {FEATURED_PROJECTS.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                featured={true}
+              />
+            ))}
+          </div>
         </div>
 
-        {/* Call-to-action */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
-            Quer conhecer mais sobre nossos projetos?
+        {/* Todos os Projetos */}
+        <div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">Todos os Projetos</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PROJECTS.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                featured={project.featured}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-16 text-center">
+          <p className="text-gray-600 mb-6">
+            Quer conhecer mais sobre algum dos nossos projetos?
           </p>
           <a
             href="#contato"
-            className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            className="inline-block px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors duration-300"
           >
             Entre em Contato
           </a>

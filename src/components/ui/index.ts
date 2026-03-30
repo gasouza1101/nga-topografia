@@ -8,3 +8,5 @@ export { Badge } from "./Badge";
 export { Input } from "./Input";
 export { Textarea } from "./Textarea";
 export { Card } from "./Card";
+export { ProjectCard } from "./ProjectCard";
+

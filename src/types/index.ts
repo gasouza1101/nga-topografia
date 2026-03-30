@@ -9,6 +9,7 @@ export interface Service {
   title: string;
   description: string;
   icon: string; // Nome do ícone lucide-react
+  category?: "levantamentos" | "projetos" | "georreferenciamento" | "locacao" | "monitoramento" | "urbanismo";
 }
 
 /** Projeto realizado pela empresa */
@@ -19,6 +20,7 @@ export interface Project {
   image?: string;
   category: "topografia" | "georreferenciamento" | "regularizacao" | "projetos";
   date: string;
+  featured?: boolean;
 }
 
 /** Metadados de página para SEO */

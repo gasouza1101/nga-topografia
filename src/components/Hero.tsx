@@ -9,7 +9,7 @@ import { SOCIAL_LINKS } from "@/constants/navigation";
  */
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white px-4 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white px-4 overflow-hidden pt-16">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -63,34 +63,6 @@ export default function Hero() {
           >
             Conheça Nossos Serviços
           </a>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-12"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="flex justify-center"
-          >
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </motion.div>
         </motion.div>
       </motion.div>
     </section>
