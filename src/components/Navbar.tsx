@@ -13,8 +13,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full backdrop-blur bg-white/80 border-b border-gray-200 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
+    <nav className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm backdrop-blur-sm transition-all duration-300">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         
         {/* Logo */}
         <a
@@ -24,7 +24,7 @@ export default function Navbar() {
           <img
             src="/images/LOGO%20nga.png"
             alt="NGA Topografia"
-            className="h-10 md:h-11 w-auto object-contain"
+            className="h-12 md:h-14 w-auto object-contain p-1"
           />
         </a>
 
@@ -34,12 +34,12 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-gray-700 hover:text-green-900 transition-colors font-medium text-sm relative group"
+              className="text-gray-800 hover:text-primary transition-colors font-medium text-sm relative group"
             >
               {link.label}
 
               {/* underline animation */}
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-green-900 transition-all group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all group-hover:w-full"></span>
             </a>
           ))}
         </div>
@@ -62,7 +62,7 @@ export default function Navbar() {
       <div
         className={cn(
           "md:hidden overflow-hidden transition-all duration-300",
-          isOpen ? "max-h-96 border-t" : "max-h-0"
+          isOpen ? "max-h-96 border-t border-gray-200" : "max-h-0"
         )}
       >
         <div className="flex flex-col px-6 py-4 gap-2 bg-white">
@@ -71,7 +71,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={handleLinkClick}
-              className="text-gray-700 hover:text-green-900 hover:bg-gray-100 px-4 py-2 rounded-lg transition"
+              className="text-gray-800 hover:text-primary hover:bg-gray-100 px-4 py-2 rounded-lg transition"
             >
               {link.label}
             </a>

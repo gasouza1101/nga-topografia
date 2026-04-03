@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contato"
-      className="py-24 bg-gradient-to-b from-green-900 to-green-800 text-white"
+      className="py-24 bg-gradient-to-b from-secondary to-accent text-primary-foreground"
       aria-labelledby="contato-heading"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -21,7 +21,7 @@ export default function Contact() {
           >
             Entre em Contato
           </h2>
-          <p className="text-green-100 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/90 max-w-2xl mx-auto">
             Estamos prontos para ajudar seu projeto de topografia
           </p>
         </div>
@@ -30,13 +30,13 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Email */}
           <div className="text-center">
-            <div className="inline-block p-3 bg-green-700 rounded-full mb-4">
+            <div className="inline-block p-3 bg-secondary/40 rounded-full mb-4">
               <Mail className="w-6 h-6" />
             </div>
             <h3 className="font-semibold text-lg mb-2">Email</h3>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="text-green-100 hover:text-white transition-colors break-all"
+              className="text-primary-foreground/90 hover:text-primary-foreground transition-colors break-all"
             >
               {CONTACT_EMAIL}
             </a>
@@ -44,13 +44,13 @@ export default function Contact() {
 
           {/* Telefone */}
           <div className="text-center">
-            <div className="inline-block p-3 bg-green-700 rounded-full mb-4">
+            <div className="inline-block p-3 bg-secondary/40 rounded-full mb-4">
               <Phone className="w-6 h-6" />
             </div>
             <h3 className="font-semibold text-lg mb-2">Telefone</h3>
             <a
               href={`tel:${COMPANY_PHONE.replace(/\D/g, "")}`}
-              className="text-green-100 hover:text-white transition-colors"
+              className="text-primary-foreground/90 hover:text-primary-foreground transition-colors"
             >
               {COMPANY_PHONE}
             </a>
@@ -58,7 +58,7 @@ export default function Contact() {
 
           {/* WhatsApp */}
           <div className="text-center">
-            <div className="inline-block p-3 bg-green-700 rounded-full mb-4">
+            <div className="inline-block p-3 bg-secondary/40 rounded-full mb-4">
               <Phone className="w-6 h-6" />
             </div>
             <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
@@ -66,7 +66,7 @@ export default function Contact() {
               href={SOCIAL_LINKS.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-100 hover:text-white transition-colors"
+              className="text-primary-foreground/90 hover:text-primary-foreground transition-colors"
             >
               Abrir no WhatsApp
             </a>
@@ -79,14 +79,14 @@ export default function Contact() {
             href={SOCIAL_LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-green-900 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors shadow-lg"
+            className="inline-block bg-background text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors shadow-lg"
           >
             Solicitar Orçamento
           </a>
         </div>
 
         {/* Footer */}
-        <div className="mt-12 pt-8 border-t border-green-700 text-center text-sm text-green-100">
+        <div className="mt-12 pt-8 border-t border-accent/60 text-center text-sm text-primary-foreground/90">
           <p>&copy; 2024 NGA Topografia. Todos os direitos reservados.</p>
         </div>
       </div>

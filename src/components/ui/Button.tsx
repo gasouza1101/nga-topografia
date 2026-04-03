@@ -1,4 +1,3 @@
-import { colors, spacing } from "@/design-system";
 import { ReactNode } from "react";
 
 export type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
@@ -36,24 +35,24 @@ export function Button({
 
   const variantClasses = {
     primary: `
-      bg-green-600 text-white
-      hover:bg-green-700 active:bg-green-800
-      focus-visible:ring-offset-green-100
+      bg-primary text-primary-foreground
+      hover:bg-primary/90 active:bg-primary/80
+      focus-visible:ring-primary/40 focus-visible:ring-offset-background
     `,
     secondary: `
-      bg-blue-600 text-white
-      hover:bg-blue-700 active:bg-blue-800
-      focus-visible:ring-blue-500
+      bg-secondary text-secondary-foreground
+      hover:bg-secondary/90 active:bg-secondary/80
+      focus-visible:ring-secondary/40 focus-visible:ring-offset-background
     `,
     outline: `
-      border-2 border-green-600 text-green-600
-      hover:bg-green-50 active:bg-green-100
-      focus-visible:ring-green-500
+      border-2 border-primary text-primary
+      hover:bg-primary/10 active:bg-primary/15
+      focus-visible:ring-primary/30 focus-visible:ring-offset-background
     `,
     ghost: `
-      text-green-600
-      hover:bg-green-50 active:bg-green-100
-      focus-visible:ring-green-500
+      text-primary
+      hover:bg-primary/10 active:bg-primary/15
+      focus-visible:ring-primary/30 focus-visible:ring-offset-background
     `,
   };
 

@@ -9,11 +9,11 @@ import { SOCIAL_LINKS } from "@/constants/navigation";
  */
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white px-4 overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-secondary via-primary to-accent text-primary-foreground px-4 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-background rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-background rounded-full blur-3xl"></div>
       </div>
 
       {/* Content */}
@@ -36,7 +36,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-lg sm:text-xl text-green-100 mb-8 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg sm:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
           Precisão e confiança em soluções topográficas para seus projetos. 
           Com tecnologia de ponta e expertise, garantimos resultados excepcionais.
@@ -53,13 +53,13 @@ export default function Hero() {
             href={SOCIAL_LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="bg-background text-foreground px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 hover:bg-muted transition-all duration-300"
           >
             Solicitar Orçamento
           </a>
           <a
             href="#servicos"
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition-all duration-300"
+            className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-background hover:text-foreground transition-all duration-300"
           >
             Conheça Nossos Serviços
           </a>
@@ -78,7 +78,7 @@ export default function Hero() {
             className="flex justify-center"
           >
             <svg
-              className="w-6 h-6 text-white"
+              className="w-6 h-6 text-primary-foreground"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

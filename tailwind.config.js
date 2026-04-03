@@ -8,7 +8,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1f3d2b",
+        // Brand / semantic design tokens (extracted from /public/images/LOGO nga.png)
+        primary: "#026389",
+        "primary-foreground": "#FFFFFF",
+
+        secondary: "#03364B",
+        "secondary-foreground": "#FFFFFF",
+
+        accent: "#476C81",
+
+        muted: "#E1E6E9",
+
+        background: "#FFFFFF",
+        foreground: "#03364B",
+
+        border: "#C4D0D6",
       },
     },
   },

@@ -19,14 +19,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed w-full backdrop-blur bg-white/70 border-b border-gray-200 z-50"
+      className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm backdrop-blur-sm transition-all duration-300"
       aria-label="Navegação principal"
     >
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <a
           href="#"
-          className="font-bold text-xl text-green-900 hover:text-green-700 transition-colors"
+          className="font-bold text-xl text-gray-800 hover:text-primary transition-colors"
           aria-label="NGA Topografia - Home"
         >
           NGA Topografia
@@ -41,7 +41,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-gray-700 hover:text-green-900 transition-colors font-medium text-sm"
+              className="text-gray-800 hover:text-primary transition-colors font-medium text-sm"
               role="menuitem"
             >
               {link.label}
@@ -68,7 +68,7 @@ export default function Navbar() {
         {isOpen && (
           <div
             id="mobile-menu"
-            className="absolute top-full left-0 right-0 bg-white border-b md:hidden"
+            className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 md:hidden"
             role="menu"
           >
             <div className="flex flex-col p-4 space-y-2">
@@ -76,7 +76,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-gray-700 hover:text-green-900 hover:bg-gray-100 px-4 py-2 rounded-lg transition-colors"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-100 px-4 py-2 rounded-lg transition-colors"
                   onClick={handleLinkClick}
                   role="menuitem"
                 >

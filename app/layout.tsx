@@ -45,8 +45,8 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         {/* Favicons e ícones de aplicação */}
-        <meta name="theme-color" content="#065f46" />
-        <meta name="msapplication-TileColor" content="#065f46" />
+        <meta name="theme-color" content="#026389" />
+        <meta name="msapplication-TileColor" content="#026389" />
 
         {/* DNS Prefetch para otimização de conexão */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />

@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 body {
-  background-color: white;
-  color: rgb(31, 41, 55);
+  @apply bg-background text-foreground;
 }

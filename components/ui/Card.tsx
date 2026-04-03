@@ -15,7 +15,7 @@ export default function Card({ children, className }: CardProps) {
     <motion.div
       whileHover={{ scale: 1.03, y: -4 }}
       transition={{ duration: 0.3 }}
-      className={`bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 ${
+      className={`bg-background p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 ${
         className || ""
       }`}
     >

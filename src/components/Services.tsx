@@ -12,7 +12,7 @@ export default function Services() {
   return (
     <section
       id="servicos"
-      className="py-24 bg-gradient-to-b from-gray-50 to-white"
+      className="py-24 bg-gradient-to-b from-muted to-background"
       aria-labelledby="servicos-heading"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -20,11 +20,11 @@ export default function Services() {
         <div className="text-center mb-12">
           <h2
             id="servicos-heading"
-            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
           >
             Nossos Serviços
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-foreground/70 max-w-2xl mx-auto">
             Oferecemos soluções completas e precisas em topografia para sua empresa
           </p>
         </div>
@@ -40,14 +40,14 @@ export default function Services() {
                 <div className="flex flex-col h-full">
                   {Icon && (
                     <Icon
-                      className="w-10 h-10 mb-4 text-green-600 flex-shrink-0"
+                      className="w-10 h-10 mb-4 text-primary flex-shrink-0"
                       aria-hidden="true"
                     />
                   )}
-                  <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                  <h3 className="font-semibold text-lg text-foreground mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-gray-600 flex-grow">
+                  <p className="text-sm text-foreground/70 flex-grow">
                     {service.description}
                   </p>
                 </div>

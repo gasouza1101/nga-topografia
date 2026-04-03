@@ -6,7 +6,7 @@
  */
 export default function Sidebar() {
   return (
-    <aside className="fixed left-0 top-0 h-screen w-24 bg-white border-r border-gray-200 flex flex-col items-center justify-start pt-8 z-40">
+    <aside className="fixed left-0 top-0 h-screen w-24 bg-background border-r border-border flex flex-col items-center justify-start pt-8 z-40">
       {/* Logo */}
       <a
         href="#"
