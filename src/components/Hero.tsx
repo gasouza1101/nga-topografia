@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SOCIAL_LINKS } from "@/constants/navigation";
+import TrackingLink from "@/components/TrackingLink";
 
 /**
  * Componente Hero
@@ -49,14 +50,15 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <a
+          <TrackingLink
+            event="click_whatsapp"
             href={SOCIAL_LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-background text-foreground px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 hover:bg-muted transition-all duration-300"
           >
             Solicitar Orçamento
-          </a>
+          </TrackingLink>
           <a
             href="#servicos"
             className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-background hover:text-foreground transition-all duration-300"

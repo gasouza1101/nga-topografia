@@ -18,7 +18,7 @@ export default function Navbar() {
         
         {/* Logo */}
         <a
-          href="#"
+          href="/"
           className="flex items-center gap-2 hover:opacity-80 transition-opacity"
         >
           <img
@@ -29,7 +29,7 @@ export default function Navbar() {
         </a>
 
         {/* Menu Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-4">
           {NAVIGATION_LINKS.map((link) => (
             <a
               key={link.href}
@@ -62,7 +62,7 @@ export default function Navbar() {
       <div
         className={cn(
           "md:hidden overflow-hidden transition-all duration-300",
-          isOpen ? "max-h-96 border-t border-gray-200" : "max-h-0"
+          isOpen ? "max-h-[32rem] border-t border-gray-200" : "max-h-0"
         )}
       >
         <div className="flex flex-col px-6 py-4 gap-2 bg-white">

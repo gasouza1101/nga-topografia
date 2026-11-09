@@ -1,13 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { SITE_METADATA, ROBOTS_CONFIG } from "@/constants/seo";
 import "./globals.css";
+import Script from "next/script";
 
 /**
  * Metadados da aplicação
  * Configuração global de SEO
  */
 export const metadata: Metadata = {
-  title: SITE_METADATA.title,
+  metadataBase: new URL("https://ngatopografia.com.br"),
+  title: {default: SITE_METADATA.title, template:"%s"},
   description: SITE_METADATA.description,
   keywords: SITE_METADATA.keywords,
   authors: SITE_METADATA.authors,
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
     description: SITE_METADATA.openGraph.description,
   },
   alternates: {
-    canonical: "https://ngatopografia.com.br",
+    canonical: "https://ngatopografia.com.br/",
   },
 };
 
@@ -58,7 +60,14 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://ngatopografia.com.br/#empresa",name:"NGA Agrimensura e Topografia",url:"https://ngatopografia.com.br",telephone:"+5511947718412",email:"contato@ngatopografia.com.br",areaServed:["São Paulo","Grande São Paulo","Interior paulista","Litoral paulista"],address:{"@type":"PostalAddress",streetAddress:"Av. Senador Teotônio Vilela, 4029",addressLocality:"São Paulo",addressRegion:"SP",postalCode:"04638-000",addressCountry:"BR"}})}} />
+        {process.env.NEXT_PUBLIC_GA_ID && <>
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} strategy="afterInteractive"/>
+          <Script id="ga4" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','${process.env.NEXT_PUBLIC_GA_ID}');`}</Script>
+        </>}
+        {children}
+      </body>
     </html>
   );
 }
