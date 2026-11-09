@@ -3,7 +3,7 @@
  */
 
 export const SITE_METADATA = {
-  title: "NGA Topografia - Soluções em Levantamento Topográfico",
+  title: "NGA Topografia | Empresa de Topografia em São Paulo",
   description:
     "Serviços profissionais de topografia, georreferenciamento e regularização de terrenos. Precisão e confiança em seus projetos.",
   keywords: [
@@ -23,7 +23,7 @@ export const SITE_METADATA = {
     locale: "pt_BR",
     url: "https://ngatopografia.com.br",
     siteName: "NGA Topografia",
-    title: "NGA Topografia - Soluções em Levantamento Topográfico",
+    title: "NGA Topografia | Empresa de Topografia em São Paulo",
     description:
       "Serviços profissionais de topografia, georreferenciamento e regularização de terrenos.",
   },

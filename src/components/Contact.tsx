@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SOCIAL_LINKS, COMPANY_PHONE, CONTACT_EMAIL } from "@/constants/navigation";
+import TrackingLink from "@/components/TrackingLink";
 
 /**
  * Componente Contact
@@ -48,12 +49,13 @@ export default function Contact() {
               <Phone className="w-6 h-6" />
             </div>
             <h3 className="font-semibold text-lg mb-2">Telefone</h3>
-            <a
+            <TrackingLink
+              event="click_telefone"
               href={`tel:${COMPANY_PHONE.replace(/\D/g, "")}`}
               className="text-primary-foreground/90 hover:text-primary-foreground transition-colors"
             >
               {COMPANY_PHONE}
-            </a>
+            </TrackingLink>
           </div>
 
           {/* WhatsApp */}
@@ -62,32 +64,34 @@ export default function Contact() {
               <Phone className="w-6 h-6" />
             </div>
             <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
-            <a
+            <TrackingLink
+              event="click_whatsapp"
               href={SOCIAL_LINKS.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary-foreground/90 hover:text-primary-foreground transition-colors"
             >
               Abrir no WhatsApp
-            </a>
+            </TrackingLink>
           </div>
         </div>
 
         {/* Primary CTA */}
         <div className="text-center">
-          <a
+          <TrackingLink
+            event="click_whatsapp"
             href={SOCIAL_LINKS.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-background text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors shadow-lg"
           >
             Solicitar Orçamento
-          </a>
+          </TrackingLink>
         </div>
 
         {/* Footer */}
         <div className="mt-12 pt-8 border-t border-accent/60 text-center text-sm text-primary-foreground/90">
-          <p>&copy; 2024 NGA Topografia. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} NGA Topografia. Todos os direitos reservados.</p>
         </div>
       </div>
     </section>

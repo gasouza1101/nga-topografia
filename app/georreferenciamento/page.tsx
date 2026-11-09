@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import CommercialPage from "@/components/CommercialPage";
+import {pageMetadata} from "@/lib/metadata";
+export const metadata:Metadata = pageMetadata("Empresa de Georreferenciamento | NGA Topografia","Levantamentos com GNSS e referências geodésicas para imóveis e projetos técnicos.","/georreferenciamento/");
+export default function Page(){return <CommercialPage title="Georreferenciamento de imóveis" intro="Levantamentos georreferenciados para diferentes finalidades, observando as exigências técnicas e legais pertinentes." items={[{"title": "Bases georreferenciadas", "body": "Implantação e determinação de pontos de apoio com referência geodésica adequada ao projeto."}, {"title": "Imóveis urbanos e rurais", "body": "Levantamento de limites e elementos para representação georreferenciada conforme finalidade."}, {"title": "SIRGAS2000 e GNSS/RTK", "body": "Processamento e apresentação de coordenadas de acordo com a metodologia contratada."}, {"title": "SIGEF/INCRA", "body": "Análise da documentação e dos requisitos aplicáveis; certificação e submissão somente quando cabíveis e com habilitação específica confirmada."}]}/>;}

@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import CommercialPage from "@/components/CommercialPage";
+import {pageMetadata} from "@/lib/metadata";
+export const metadata:Metadata = pageMetadata("Empresa de Topografia para Obras em São Paulo | NGA","Levantamentos, locação e acompanhamento topográfico para obras na capital, interior e litoral paulista.","/topografia-para-obras/");
+export default function Page(){return <CommercialPage title="Topografia para obras" intro="A NGA presta serviços de levantamento e apoio topográfico em diferentes etapas de obras civis." items={[{"title": "Levantamento planialtimétrico cadastral", "body": "Levantamento de elementos existentes, coordenadas, cotas e feições necessárias ao planejamento e à execução da obra."}, {"title": "Locação de obras", "body": "Materialização de eixos, pontos e referências conforme os projetos fornecidos."}, {"title": "Acompanhamento topográfico", "body": "Conferência de alinhamentos, níveis e posicionamentos durante a execução."}, {"title": "Levantamento as built", "body": "Cadastro das condições executadas conforme escopo técnico contratado."}]}/>;}

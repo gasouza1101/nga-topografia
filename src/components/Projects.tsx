@@ -31,6 +31,7 @@ export default function Projects() {
           </p>
         </div>
 
+        {PROJECTS.length === 0 && <p className="text-center text-foreground/70">Estamos organizando registros reais dos serviços executados para publicação neste espaço.</p>}
         {/* Projetos em Destaque */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-foreground mb-8">Destaques</h3>
@@ -65,7 +66,7 @@ export default function Projects() {
             Quer conhecer mais sobre algum dos nossos projetos?
           </p>
           <a
-            href="#contato"
+            href="/contato/"
             className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300"
           >
             Entre em Contato

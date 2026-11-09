@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import CommercialPage from "@/components/CommercialPage";
+import {pageMetadata} from "@/lib/metadata";
+export const metadata:Metadata = pageMetadata("Topografia para Infraestrutura e Saneamento | NGA","Serviços topográficos para drenagem, redes de água e esgoto e obras viárias.","/topografia-para-infraestrutura/");
+export default function Page(){return <CommercialPage title="Topografia para infraestrutura e saneamento" intro="Apoio topográfico para implantação, acompanhamento e cadastro de infraestrutura urbana." items={[{"title": "Drenagem", "body": "Cadastro de dispositivos de drenagem, cotas e elementos existentes, conforme acesso disponível."}, {"title": "Saneamento", "body": "Levantamentos e locação de redes de água e esgoto, estruturas e interferências acessíveis."}, {"title": "Obras viárias", "body": "Levantamentos de vias, perfis longitudinais, seções e apoio à execução."}, {"title": "Controle geométrico", "body": "Conferência de cotas, alinhamentos e locações durante a obra."}]}/>;}
